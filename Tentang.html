@@ -1,0 +1,119 @@
+<html >
+<head>
+    <title>MOKLET Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reka 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+<nav class="bg-red-700 text-white">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo Gambar Moklet -->
+    <a href="#">
+      <img src="https://ppdb.smktelkom-mlg.sch.id/assets/home/img/logo_putih.png" alt="Logo SMK Telkom" class="h-10">
+    </a>
+    
+    <!-- Menu Desktop -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:bg-red-800  px-3 py-2 rounded transition">Beranda</a>
+      <a href="List Portofolio.html" class="hover:bg-red-800 px-3 py-2 rounded transition">List Portofolio</a>
+      <a href="Tentang.html" class="hover:bg-red-800 px-3 py-2 rounded transition">Tentang</a>
+    </div>
+    
+    <!-- Tombol Hamburger -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="text-white text-2xl focus:outline-none">☰</button>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:bg-red-800 rounded px-2">Beranda</a>
+    <a href="List Portofolio.html" class="block py-2 hover:bg-red-800 rounded px-2">List Portofolio</a>
+    <a href="Tentang.html" class="block py-2 hover:bg-red-800 rounded px-2">Tentang</a>
+  </div>
+</nav>
+
+<!-- JavaScript Toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!--Akhir Navbar-->
+
+<!--Tentang gw-->
+<section id="tentang" style="padding: 2rem; background-color: #ffffff;">
+  <div style="max-width: 900px; margin: auto;  display: flex; flex-wrap: wrap; align-items: center;">
+    <div style="flex: 1 1 300px; padding: 1rem;">
+      <img src="./images/fotogw.jpg" alt="Foto vincent" style="width: 100%; border-radius: 480px;">
+    </div>
+    <div style="flex: 2 1 400px; padding: 1rem;">
+      <h2 style="font-size: 2rem; margin-bottom: 1rem;"><strong>Kenalan Dulu YUK!!</strong></h2>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Halo, saya <strong>Vincentius Ferrer Pioraka</strong>, seorang pelajar berusia 17 tahun yang sedang menekuni dunia pemrograman web. Saya memiliki minat besar dalam coding dan terus mengembangkan kemampuan di bidang web development. Saat ini, saya aktif membangun portofolio dengan proyek-proyek sederhana menggunakan HTML, CSS, dan JavaScript.
+        <br />
+        Saya berdomisili di <strong>Danau Bratan G5 C10</strong> dan dapat dihubungi melalui email:
+        <strong>vincent_pioraka_33rpl@student.smktelkom-mlg.sch.id</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--Tentang gw Akhir-->
+
+<!---Footer-->
+<footer style="background-color: #a90404; color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
+  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    
+    <!-- Tentang Kami -->
+    <div style="flex: 1 1 250px; margin-bottom: 20px;">
+      <h3 style="margin-bottom: 10px;">Tentang Kami</h3>
+      <p style="margin: 0;">Kami adalah tim pengembang web<br>yang berdedikasi untuk Kelas Anda.</p>
+    </div>
+
+   <!-- Sosial Media -->
+<div style="flex: 1 1 250px; margin-bottom: 20px;">
+  <h3 style="margin-bottom: 10px;">Sosial Media</h3>
+  <a href="https://www.facebook.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Facebook</a>
+  <a href="https://www.instagram.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Instagram</a>
+  <a href="https://www.twitter.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Twitter</a>
+  <a href="https://www.linkedin.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">LinkedIn</a>
+</div>
+
+
+    <!-- Kontak -->
+<div style="flex: 1 1 250px; margin-bottom: 20px;">
+  <h3 style="margin-bottom: 10px;">Kontak</h3>
+  <p style="margin: 4px 0;">
+    Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vincent_pioraka_33rpl@student.smktelkom-mlg.sch.id" style="color: white; text-decoration: underline;">
+      vincent_pioraka_33rpl@student.smktelkom-mlg.sch.id
+    </a>
+  </p>
+  <p style="margin: 4px 0;">
+    Telepon: <a href="https://wa.me/6289601570111" style="color: white; text-decoration: underline;">
+      0896 0157 0111
+    </a>
+  </p>
+  <p style="margin: 4px 0;">
+    Alamat: <a href="https://www.google.com/maps/place/SMK+Telkom+Malang/@-7.976862,112.659016,862m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd6285c5c1b44e3:0xf6c889ac7452dc3a!8m2!3d-7.976862!4d112.659016!16s%2Fg%2F1wjspsfl?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: white; text-decoration: underline;">
+       Jl. Danau Ranau, Sawojajar, Kec. Kedungkandang, Kota Malang, Jawa Timur 65139
+    </a>
+  </p>
+</div>
+
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align: center; margin-top: 30px; font-size: 14px;">
+    © 2025 Mokleters. All rights reserved.
+  </div>
+</footer>
+<!--Akhir footer-->

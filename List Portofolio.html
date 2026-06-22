@@ -1,0 +1,243 @@
+<html >
+<head>
+    <title>MOKLET Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reka 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-red-700 text-white">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo Gambar Moklet -->
+    <a href="#">
+      <img src="https://ppdb.smktelkom-mlg.sch.id/assets/home/img/logo_putih.png" alt="Logo SMK Telkom" class="h-10">
+    </a>
+    
+    <!-- Menu Desktop -->
+    <div class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:bg-red-800  px-3 py-2 rounded transition">Beranda</a>
+      <a href="List Portofolio.html" class="hover:bg-red-800 px-3 py-2 rounded transition">List Portofolio</a>
+      <a href="Tentang.html" class="hover:bg-red-800 px-3 py-2 rounded transition">Tentang</a>
+    </div>
+    
+    <!-- Tombol Hamburger -->
+    <div class="md:hidden">
+      <button id="menuBtn" class="text-white text-2xl focus:outline-none">☰</button>
+    </div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+    <a href="index.html" class="block py-2 hover:bg-red-800 rounded px-2">Beranda</a>
+    <a href="List Portofolio.html" class="block py-2 hover:bg-red-800 rounded px-2">List Portofolio</a>
+    <a href="Tentang.html" class="block py-2 hover:bg-red-800 rounded px-2">Tentang</a>
+  </div>
+</nav>
+
+<!-- JavaScript Toggle -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+<!--Akhir Navbar-->
+
+<!---List portofolio-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Judul -->
+  <section class="text-center py-10">
+    <h1 class="text-4xl font-bold text-red-700">List Portofolio</h1>
+    <p class="text-gray-600 mt-2">Beberapa karya pilihan siswa SMK Telkom Malang</p>
+  </section>
+
+  <!-- Daftar Portofolio -->
+  <section class="max-w-6xl mx-auto px-4">
+    <div id="portfolio-list" class="grid gap-6 sm:grid-cols-2 md:grid-cols-3"></div>
+  </section>
+
+  <!-- Detail Portofolio -->
+  <div id="portfolio-detail" class="mt-10 hidden">
+    <div class="bg-white shadow rounded-xl p-6 max-w-3xl mx-auto">
+      <h2 id="detail-title" class="text-lg font-semibold mb-2"></h2>
+      <p class="text-sm text-gray-500 mb-4" id="detail-meta"></p>
+      <img id="detail-img" src="" alt="Detail Image" class="rounded-lg mb-4 w-full max-w-md mx-auto object-contain" />
+      <p id="detail-desc" class="text-gray-700 mb-4"></p>
+      <h3 class="font-semibold mb-1">Alat & Software yang digunakan:</h3>
+      <ul id="detail-tools" class="list-disc list-inside text-gray-700"></ul>
+      <button onclick="closeDetail()" class="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const portfolioData = [
+      {
+        title: "Desain Poster Digital Tingkat Kota Malang",
+        img: "./images/posdit.webp",
+        meta: "Dibuat oleh: Ida Wayan Widyadnyana Eka Putra - Tanggal: 20 April 2024",
+        desc: "Poster ini dibuat untuk mengedukasi supaya melakukan 7 kebiasaan anak Indonesia Hebat.",
+        tools: ["Adobe Photoshop", "Drawing Tablet Wacom One", "Font: Montserrat & Bebas Neue", "Referensi: Unsplash & Pixabay"]
+      },
+      {
+        title: "MOPOCO Cerpen 2025",
+        img: "./images/cerpen.jpg",
+        meta: "Dibuat oleh: Derap Juang - Tanggal: 12 Maret 2023",
+        desc: "Cerita pendek tentang seorang pahlawan bernama bungkarno.",
+        tools: ["Google Docs", "Kamus Besar Bahasa Indonesia", "Grammarly"]
+      },
+      {
+        title: "Model 3D Game",
+        img: "./images/game.jpg",
+        meta: "Dibuat oleh: Anonymous - Tanggal: 5 Februari 2024",
+        desc: "Desain arsitektur sederhana menggunakan SketchUp. Fokus pada elemen modern dan minimalis.",
+        tools: ["SketchUp", "Canva untuk rendering", "Pixabay untuk tekstur"]
+      },
+      {
+        title: "Infografis Kesehatan",
+        img: "./images/1m.jpg",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 27 Januari 2025",
+        desc: "Logo untuk komunitas pemuda lokal dengan tema alam dan kebersamaan.",
+        tools: ["Adobe Illustrator", "Font: Poppins", "Behance untuk inspirasi"]
+      },
+      {
+        title: "Infografis Sampah Plastik",
+        img: "./images/sm.jpg",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 18 Januari 2025",
+        desc: "Infografis tentang bahaya sampah plastik terhadap lingkungan.",
+        tools: ["Canva", "Data dari Greenpeace", "Font: Roboto"]
+      },
+      {
+        title: "Juara Moklet",
+        img: "./images/jr.jpg",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 3 Januari 2025",
+        desc: "Cerita pendek tentang persahabatan dan kebebasan.",
+        tools: ["Google Docs", "Grammarly", "Pinterest untuk visualisasi"]
+      },
+      {
+        title: "MPLS Moklet",
+        img: "./images/mpls.png",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 22 Desember 2024",
+        desc: "Desain topik lingkungan untuk kampanye digital.",
+        tools: ["Figma", "Font: Lato", "Canva"]
+      },
+      {
+        title: "UI UX Lomba",
+        img: "./images/uek.jpeg",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 15 Desember 2024",
+        desc: "Mockup aplikasi to-do list dengan Figma.",
+        tools: ["Figma", "Google Fonts", "Dribbble untuk inspirasi"]
+      },
+      {
+        title: "Brosur Produk",
+        img: "./images/brosur.jpeg",
+        meta: "Dibuat oleh: Ariana Sulistyo - Tanggal: 1 Desember 2024",
+        desc: "Brosur promosi minuman herbal alami.",
+        tools: ["Adobe Illustrator", "Font: Nunito", "Mockup dari Freepik"]
+      }
+    ];
+
+    const listContainer = document.getElementById("portfolio-list");
+    const detailContainer = document.getElementById("portfolio-detail");
+
+    portfolioData.forEach((item, i) => {
+      const card = document.createElement("div");
+      card.className = "bg-white rounded shadow hover:shadow-lg transition cursor-pointer p-4";
+      card.innerHTML = `
+        <img src="${item.img}" alt="${item.title}" class="rounded mb-2 w-full h-40 object-cover" />
+        <h3 class="text-blue-600 font-semibold">${item.title}</h3>
+      `;
+      card.onclick = () => showDetail(i);
+      listContainer.appendChild(card);
+    });
+
+    function showDetail(index) {
+      const item = portfolioData[index];
+      document.getElementById("detail-title").textContent = item.title;
+      document.getElementById("detail-meta").textContent = item.meta;
+      document.getElementById("detail-img").src = item.img;
+      document.getElementById("detail-desc").textContent = item.desc;
+
+      const toolList = document.getElementById("detail-tools");
+      toolList.innerHTML = "";
+      item.tools.forEach(tool => {
+        const li = document.createElement("li");
+        li.textContent = tool;
+        toolList.appendChild(li);
+      });
+
+      detailContainer.scrollIntoView({ behavior: 'smooth' });
+      detailContainer.classList.remove("hidden");
+    }
+
+    function closeDetail() {
+      detailContainer.classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
+<!--Akhir list portofolio-->
+
+<!---Footer-->
+<footer style="background-color: #a90404; color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
+  <div style="max-width: 1100px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between;">
+    
+    <!-- Tentang Kami -->
+    <div style="flex: 1 1 250px; margin-bottom: 20px;">
+      <h3 style="margin-bottom: 10px;">Tentang Kami</h3>
+      <p style="margin: 0;">Kami adalah tim pengembang web<br>yang berdedikasi untuk Kelas Anda.</p>
+    </div>
+
+   <!-- Sosial Media -->
+<div style="flex: 1 1 250px; margin-bottom: 20px;">
+  <h3 style="margin-bottom: 10px;">Sosial Media</h3>
+  <a href="https://www.facebook.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Facebook</a>
+  <a href="https://www.instagram.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Instagram</a>
+  <a href="https://www.twitter.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">Twitter</a>
+  <a href="https://www.linkedin.com" style="display: block; margin: 4px 0; color: white; text-decoration: none;">LinkedIn</a>
+</div>
+
+
+    <!-- Kontak -->
+<div style="flex: 1 1 250px; margin-bottom: 20px;">
+  <h3 style="margin-bottom: 10px;">Kontak</h3>
+  <p style="margin: 4px 0;">
+    Email: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vincent_pioraka_33rpl@student.smktelkom-mlg.sch.id" style="color: white; text-decoration: underline;">
+      vincent_pioraka_33rpl@student.smktelkom-mlg.sch.id
+    </a>
+  </p>
+  <p style="margin: 4px 0;">
+    Telepon: <a href="https://wa.me/6289601570111" style="color: white; text-decoration: underline;">
+      0896 0157 0111
+    </a>
+  </p>
+  <p style="margin: 4px 0;">
+    Alamat: <a href="https://www.google.com/maps/place/SMK+Telkom+Malang/@-7.976862,112.659016,862m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd6285c5c1b44e3:0xf6c889ac7452dc3a!8m2!3d-7.976862!4d112.659016!16s%2Fg%2F1wjspsfl?entry=ttu&g_ep=EgoyMDI1MDUxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" style="color: white; text-decoration: underline;">
+       Jl. Danau Ranau, Sawojajar, Kec. Kedungkandang, Kota Malang, Jawa Timur 65139
+    </a>
+  </p>
+</div>
+
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="text-align: center; margin-top: 30px; font-size: 14px;">
+    © 2025 Mokleters. All rights reserved.
+  </div>
+</footer>
+<!--Akhir footer-->
